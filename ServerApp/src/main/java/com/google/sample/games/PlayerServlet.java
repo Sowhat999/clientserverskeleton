@@ -153,7 +153,7 @@ public class PlayerServlet extends HttpServlet {
             // Special case: /player/test - this is here to confirm that the
             // server is running.  It does not communicate to the play game
             // services.
-            if (parts[2].equals("test")) {
+            if ("test".equals(parts[2])) {
                 resp.setStatus(HttpServletResponse.SC_OK);
                 Player player = new Player();
                 player.setAltPlayerId("alt_player_123");

@@ -44,7 +44,7 @@ public class GameServer {
     public static void main(String[] args) throws Exception {
         int port = DEFAULT_HTTP_PORT;
         for(int i=0;i<args.length;i++) {
-            if (args[i].equalsIgnoreCase("-p")) {
+            if ("-p".equalsIgnoreCase(args[i])) {
                 if (i +1 < args.length) {
                     try {
                         port = Integer.parseInt(args[i + 1]);

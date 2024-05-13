@@ -223,7 +223,7 @@ public class BackendClient {
                 String cookieset = headers.get("Set-Cookie");
                 Log.d(TAG, " cookies: " + cookieset);
                 String parts[] = cookieset.split("=");
-                if (parts[0].equals("JSESSIONID")) {
+                if ("JSESSIONID".equals(parts[0])) {
                     String crumbles[] = parts[1].split(";");
                     String path = parts[2];
                     String id = crumbles[0];
